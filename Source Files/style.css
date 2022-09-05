@@ -1,0 +1,281 @@
+/*
+Author: Zoe Arnold
+CSS file for Assignment 2: Final Project - INFT6009
+Date Submitted: 25 July 2022
+*/
+
+
+/* Formatting and styles of body, home screen, header, menu icon, main buttons */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {   
+    background: radial-gradient(rgba(36, 35, 35, 0.993), purple); 
+} 
+
+header {
+    padding: 20px 20px 20px 20px;
+}
+
+#menu {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    text-align: center;
+}
+
+#drum_icon {
+    width: 40px;
+    height: 40px;
+    float: right;
+    padding-bottom: 10px;
+}
+
+button {
+    font-size: 90%;
+    padding: 5px 5px;
+    background-color: white;
+    color: darkslateblue;
+    border: 1px solid;
+    text-align: center;
+    border-radius: 4px;
+}
+
+#controls
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+/* Formatting/styles for controls inside each function: buttons and user instructions */
+#gamecontrols
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+#playgame {
+    display: flex;
+    padding-bottom: 10px;
+    padding-top:10px;
+} 
+
+#userguide {
+    padding: 10px 10px;
+    text-align: center;
+}
+
+#instructions {
+    color: white;
+    font-size: 110%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: lightblue;
+    text-align: center; 
+    font-size: 100%;
+}
+
+p {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    text-align: center; 
+    font-size: 125%;
+}
+
+/* Formatting and styles for drumkit and drumpads 
+The 'active' code for each drumpad flashes the colour to white when drumpad is touched */
+
+.drumkit  {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-auto-rows: minmax(auto, auto);
+column-gap: 10px;
+}
+
+#snare {
+    display: flex;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    background: rgb(255, 193, 142);
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 10px;
+    background: rgb(255, 193, 142);
+    grid-column: 1;
+    grid-row:1;  
+}
+
+#snare:active {
+    background: white;
+}
+
+#tom {
+    display: flex;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    background:  rgb(236, 96, 183);
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 10px;
+    grid-column: 2;
+    grid-row:1; 
+}
+
+#tom:active {
+    background: white;
+}
+
+#hihat {
+    display: flex;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white; 
+    background:  rgb(6, 141, 134);
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 10px;
+    grid-column: 3;
+    grid-row:1; 
+}
+
+#hihat:active {
+    background: white;
+}
+#bass {
+    display: flex;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    background:  rgb(101, 152, 247);
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    margin: 10px;
+    border-radius: 10px;
+    grid-column: 1;
+    grid-row:2; 
+}
+
+#bass:active {
+    background: white;
+}
+
+#kick {
+    display: flex;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    background:  rgb(243, 199, 4);
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 10px;
+    grid-column: 2;
+    grid-row:2; 
+}
+
+#kick:active {
+    background: white;
+}
+
+#openhihat {
+    display: flex;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    background: red;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 10px;
+    grid-column: 3;
+    grid-row:2; 
+}
+
+#openhihat:active {
+    background: white;
+}
+
+/* Formatting and styles for learn function, including list of results, back button */
+.learninstruc { 
+    padding-bottom: 10px;
+    text-align: center;
+    color: white;
+    font-size: 120%
+}
+
+input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 120%;
+}
+
+.learntext {
+    padding: 10px 10px 10px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    text-align: left;
+}
+
+.container
+{
+    display:inline;
+    align-items: left;
+    margin: 10px 10px 10px 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    height: 20px;
+    text-transform: capitalize;  /* Used to format list of results as default from API was lowercase */
+}
+
+.resultstext
+{
+    font-size: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    align-items: left;
+    text-transform: uppercase; /* Used to format results information as default from API was lowercase */
+}
+
+#searchbutton {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80%;
+    padding: 5px 5px;
+    background-color: white;
+    color: darkslateblue;
+    border: 1px solid;
+    text-align: center;
+    border-radius: 4px;
+    margin-left: 10px; 
+}
+
+#inputbox {
+    padding: 10px 10px 10px 10px;
+}
+
+#backbutton {
+    float: right;
+    margin: 20px;
+}
+
+/*End of script*/

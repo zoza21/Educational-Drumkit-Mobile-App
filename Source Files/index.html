@@ -1,0 +1,90 @@
+<!-- 
+Author: Zoe Arnold
+HTML file for Assignment 2: Final Project - INFT6009
+Date Submitted: 25 July 2022
+-->
+
+<!-- Header code automatically generated from Monaca IDE -->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,  user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+<script src="drumkit.js"></script>
+</head>
+
+<body>
+<header>
+    <!-- Images sourced from: https://www.flaticon.com/free-icons/" -->
+    <img id="menu" src="images/menu.png" onclick="menu()">
+    <img id="drum_icon" src="images/drums.png">
+    
+</header>
+
+<div id="controls" class="controls">
+    <button class="button" id="drumplay" onclick="drums()">Drum Kit</button>
+    <button class="button" id="play" onclick="game()">Play Game</button>
+    <button class="button" id="learn" onclick="learn()">Learn</button>
+</div>
+
+<div id="userguide" class="userguide">
+    <p id="instructions"></p>
+</div>
+
+<div id="playgame" class="game" style="display:inline;">
+    <div id="gamecontrols" id="gamecontrols" style:"display:inline;">
+        <button id="playbutton" style="display:none;" onclick="playTrack()">Play</button>
+        <button id="check" style="display:none;" onclick="checkCorrect()">Check your answer?</button>
+        <button id="playagain" style="display:none;"  onclick="playAgain()">PlayAgain?</button>
+    </div>
+
+<!--  The below code to create the drumkits was sourced from 
+Music and Coding, https://www.youtube.com/watch?v=SBvn8FuylBg. 
+I used this as a guide for formatting/styling the drumkit/drumpads.
+
+I included 'ontouchstart' for each element to overcome issue with drumpads not flashing white when touched. Researched indicated ios can have issues with deployment to a mobile device when using pseudo-class "active" in css. Solution sourced from https://stackoverflow.com/questions/57630086/css-active-in-ios -->
+
+    <div id="drumkit" class="drumkit">
+        <div data-drumpad="snaredrum" id="snare" class="drums" ontouchstart>Snare</div>
+        <div data-drumpad="racktom" id="tom" class="drums" ontouchstart>Rack Tom</div>
+        <div data-drumpad="hihatclosed" id="hihat" class="drums" ontouchstart>Hi-Hat Closed</div>  
+        <div data-drumpad="floortom" id="bass" class="drums" ontouchstart>Floor Tom</div>
+        <div data-drumpad="kickdrum" id="kick" class="drums" ontouchstart>Kick</div>
+        <div data-drumpad="hihatopen" id="openhihat" class="drums" ontouchstart>Hi-Hat Open</div>
+    </div>
+
+        <!--Audio files sourced from: https://www.musicradar.com/news/drums/1000-free-drum-samples -->
+        
+        <audio  class="sound" id="snaredrum" src="sounds/snare.wav"></audio>
+        <audio  class="sound"id="racktom" src="sounds/tom.wav"></audio>
+        <audio class="sound" id="hihatclosed" src="sounds/hihat.wav"></audio>
+        <audio  class="sound"id="floortom" src="sounds/bass.wav"></audio>
+        <audio class="sound"id="kickdrum" src="sounds/kick.wav"></audio>
+        <audio class="sound" id="hihatopen" src="sounds/openhihat.wav"></audio>
+</div>
+
+<!-- The below code is from INFT6009 Week 8 Lab notes which I
+used and modified to create the "Learn" function for the app -->
+
+<div id="instsearch" style="display:none;"> 
+    <form name="searchform" action="" method="GET">
+    <p id="learninstruc" class="learninstruc">Musical Instrument Search</p>
+    <p class="learntext">What musical instrument would you like to learn about?</p>
+    <div id="inputbox">
+        <input type="text" name="inputbox" value=""><p align="right">
+    </div>
+    <input type="button" class="button" id="searchbutton" value="Search" onClick="instrumentSearch(this.form)">
+    </form>
+</div>
+
+<div id="searchResults" style="display:none;"></div>
+
+</body>
+</html>
+
+<!--End of script -->
+
