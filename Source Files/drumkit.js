@@ -1,7 +1,6 @@
 /*
-Author: Zoe Arnold
-JavaScript file for Assignment 2 - Final Project - INFT6009
-Date Submitted: 25 July 2022
+Author: zoza
+25072022
 */
 
 "use strict";
